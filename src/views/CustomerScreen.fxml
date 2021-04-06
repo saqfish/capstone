@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.TextField?>
 <AnchorPane maxHeight="620.0" maxWidth="1024.0" minWidth="1024.0" prefHeight="559.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button fx:id="backButton" layoutX="66.0" layoutY="47.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="100.0" text="BACK" />
@@ -68,5 +69,7 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <TextField fx:id="searchTextField" layoutX="52.0" layoutY="93.0" />
+      <Button fx:id="searchButton" onAction="#doSearch" layoutX="232.0" layoutY="93.0" mnemonicParsing="false" text="Search" />
    </children>
 </AnchorPane>

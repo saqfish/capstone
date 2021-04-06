@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.collections.transformation.FilteredList;
 import models.Appointment;
 import models.SQL;
 import models.Session;
@@ -39,6 +40,10 @@ public class CustomersScreen extends TranslatableScreen{
   @FXML private TableColumn<?, ?> didTableColumn;
   @FXML private TableColumn<?, ?> phoneNumberTableColumn;
   @FXML private TableColumn<?, ?> zipTableColumn;
+
+  // Added search elements
+  @FXML private TextField searchTextField;
+  @FXML private Button searchButton;
 
   /**
    * Customer Screen Constructor
@@ -159,4 +164,21 @@ public class CustomersScreen extends TranslatableScreen{
   };
       return appointments > 0;
 }
+
+  /**
+   * Search appointments by value
+   * search is done by ID, Name, and Address
+   * @param event Action Event
+   */
+  @FXML void doSearch(ActionEvent event) {
+    String text = searchTextField.getText();
+    FilteredList<Customer> data = new FilteredList<>(session.getCache().getCustomers());
+    data.setPredicate(row -> {
+      String rowId = String.valueOf(row.getCid());
+      String rowTitle = row.getName();
+      String rowDesc = row.getAddress();
+      return rowTitle.contains(text) || rowDesc.contains(text) || rowId.contains(text);
+    });
+    customerTableView.setItems(data);
+  }
 }

@@ -49,6 +49,10 @@ public class AppointmentsScreen extends TranslatableScreen{
   @FXML private TableColumn<?, ?> titleColumn;
   @FXML private TableColumn<?, ?> typeColumn;
 
+  // Added search elements
+  @FXML private TextField searchTextField;
+  @FXML private Button searchButton;
+
   /**
    * Appointments Screen Constructor
    * @param session current session
@@ -201,5 +205,23 @@ public class AppointmentsScreen extends TranslatableScreen{
    * @throws IOException Exception on failure
    */
   @FXML void goBack(ActionEvent event) throws IOException { loadMain(event, session);}
+
+  /**
+   * Search appointments by value
+   * search is done by ID, title, and description
+   * @param event Action Event
+   */
+  @FXML void doSearch(ActionEvent event) {
+    String text = searchTextField.getText();
+    FilteredList<Appointment> data = new FilteredList<>(session.getCache().getAppointments());
+    data.setPredicate(row -> {
+      String rowId = String.valueOf(row.getAid());
+      String rowTitle = row.getTitle();
+      String rowDesc = row.getDescription();
+      return rowTitle.contains(text) || rowDesc.contains(text) || rowId.contains(text);
+    });
+    appTableView.setItems(data);
+  }
+
 
 }
