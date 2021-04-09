@@ -1,6 +1,6 @@
 DB Scheduling System
 Abdirsiaq Sheikh - asheik6@wgu.edu
-Date: 12/30/2020
+Date: 04/08/2021
 Purpose: Develop a GUI-based scheduling desktop application that connects to an existing MySQL database.
 
 Versions used:
@@ -16,5 +16,7 @@ How to Launch:
 2. Add MySql connector to the project
 1. Add the run configuration with VM options: `--module-path <JavaFx path> --add-modules javafx.controls,javafx.fxml`.
 
-Chosen report style:
-The reports screen shows the total number of customer appointments by type and month. I also added a location total tab for extra reporting.
+Launching from provided JAR:
+
+java --module-path JavaFX --add-modules javafx.fxml,javafx.controls -jar scheduler.jar
+
