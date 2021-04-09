@@ -158,7 +158,7 @@ public class NewCustomerScreen extends TranslatableScreen{
     alert.setContentText(language().getString("CANCEL_CONFIRM_TEXT"));
     Optional<ButtonType> result = alert.showAndWait();
     if (result.get() == ButtonType.OK)
-        loadScreen(event, new CustomersScreen(session), "../views/CustomerScreen.fxml");
+        loadScreen(event, new CustomersScreen(session), "/views/CustomerScreen.fxml");
   }
 
   /**
@@ -226,7 +226,7 @@ public class NewCustomerScreen extends TranslatableScreen{
       } catch (Exception e) {
         e.printStackTrace();
       }
-      loadScreen(event, new CustomersScreen(session), "../views/CustomerScreen.fxml");
+      loadScreen(event, new CustomersScreen(session), "/views/CustomerScreen.fxml");
     }
   }
 }

@@ -87,7 +87,7 @@ public class CustomersScreen extends TranslatableScreen{
    */
   @FXML
   void newCustomer(ActionEvent event) throws IOException {
-    loadScreen(event, new NewCustomerScreen(session), "../views/NewCustomerScreen.fxml");
+    loadScreen(event, new NewCustomerScreen(session), "/views/NewCustomerScreen.fxml");
   }
 
   /**
@@ -99,7 +99,7 @@ public class CustomersScreen extends TranslatableScreen{
   private void updateCustomer(ActionEvent event) throws IOException {
     Customer selection = customerTableView.getSelectionModel().getSelectedItem();
     if (selection != null) {
-      loadScreen(event, new UpdateCustomerScreen(session, selection), "../views/UpdateCustomerScreen.fxml");
+      loadScreen(event, new UpdateCustomerScreen(session, selection), "/views/UpdateCustomerScreen.fxml");
     } else {
       alert(Alert.AlertType.ERROR
               ,language().getString("ERROR")

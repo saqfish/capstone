@@ -16,7 +16,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Session session = new Session();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/LoginScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/LoginScreen.fxml"));
         LoginScreen controller = new LoginScreen(session);
         loader.setController(controller);
         primaryStage.setTitle("DB Scheduling System");

@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="C868CAPSTONE:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/C868CAPSTONE_jar</output-path>
+    <root id="archive" name="C868CAPSTONE.jar">
+      <element id="module-output" name="C868CAPSTONE" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/mysql-connector-java-8.0.22.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/JavaFX/javafx.graphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

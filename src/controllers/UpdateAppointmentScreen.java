@@ -312,7 +312,7 @@ public class UpdateAppointmentScreen extends TranslatableScreen{
           } catch (Exception e2) {
             e2.printStackTrace();
           }
-          loadScreen(event, new AppointmentsScreen(session), "../views/AppointmentScreen.fxml");
+          loadScreen(event, new AppointmentsScreen(session), "/views/AppointmentScreen.fxml");
         }
       } catch (Exception e) {
           e.printStackTrace();
@@ -337,7 +337,7 @@ public class UpdateAppointmentScreen extends TranslatableScreen{
     alert.setContentText(language().getString("CANCEL_APPOINTMENT_TEXT"));
     Optional<ButtonType> result = alert.showAndWait();
     if (result.get() == ButtonType.OK){
-      loadScreen(event, new AppointmentsScreen(session), "../views/AppointmentScreen.fxml");
+      loadScreen(event, new AppointmentsScreen(session), "/views/AppointmentScreen.fxml");
     }
   }
 }

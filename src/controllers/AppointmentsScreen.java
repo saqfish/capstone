@@ -104,7 +104,7 @@ public class AppointmentsScreen extends TranslatableScreen{
    * @throws IOException Exception on failure
    */
   @FXML void newAppointment(ActionEvent event) throws IOException {
-    loadScreen(event, new NewAppointmentScreen(session), "../views/NewAppointmentScreen.fxml");
+    loadScreen(event, new NewAppointmentScreen(session), "/views/NewAppointmentScreen.fxml");
   }
 
   /**
@@ -115,7 +115,7 @@ public class AppointmentsScreen extends TranslatableScreen{
   @FXML void updateAppointment(ActionEvent event) throws IOException {
     Appointment selection = appTableView.getSelectionModel().getSelectedItem();
     if (selection != null)
-      loadScreen(event, new UpdateAppointmentScreen(session, selection), "../views/UpdateAppointmentScreen.fxml");
+      loadScreen(event, new UpdateAppointmentScreen(session, selection), "/views/UpdateAppointmentScreen.fxml");
     else
       alert(Alert.AlertType.ERROR
               ,language().getString("ERROR")

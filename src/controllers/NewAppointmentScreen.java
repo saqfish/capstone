@@ -238,7 +238,7 @@ public class NewAppointmentScreen extends TranslatableScreen{
     alert.setContentText(language().getString("CANCEL_APPOINTMENT_TEXT"));
     Optional<ButtonType> result = alert.showAndWait();
     if (result.get() == ButtonType.OK)
-      loadScreen(event, new AppointmentsScreen(session), "../views/AppointmentScreen.fxml");
+      loadScreen(event, new AppointmentsScreen(session), "/views/AppointmentScreen.fxml");
   }
 
   /**
@@ -300,7 +300,7 @@ public class NewAppointmentScreen extends TranslatableScreen{
 
       if (Util.checkAppointment(utcStart, utcend, customerId, newId, language())) {
         session.getCache().newAppointment(cApp(newId, tft, dft, lft, tyft, lend, lstart, current_date, contactId, utcStart, utcend, creator, lub, customerId, userId));
-        loadScreen(event, new AppointmentsScreen(session), "../views/AppointmentScreen.fxml");
+        loadScreen(event, new AppointmentsScreen(session), "/views/AppointmentScreen.fxml");
       }
     }
   }

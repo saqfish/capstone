@@ -35,7 +35,7 @@ public class ControlledScreen implements Initializable {
         return Void.class;
     }
     public void loadMain(ActionEvent event, Session session) throws IOException {
-        loadScreen(event, new MainScreen(session), "../views/MainScreen.fxml");
+        loadScreen(event, new MainScreen(session), "/views/MainScreen.fxml");
     }
 
     public void alert(Alert.AlertType type, String title, String header){

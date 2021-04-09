@@ -63,7 +63,7 @@ public class MainScreen extends TranslatableScreen{
      */
     @FXML
     void AppointmentScreen(ActionEvent event) throws IOException {
-        loadScreen(event, new AppointmentsScreen(session), "../views/AppointmentScreen.fxml");
+        loadScreen(event, new AppointmentsScreen(session), "/views/AppointmentScreen.fxml");
     }
 
     /**
@@ -73,7 +73,7 @@ public class MainScreen extends TranslatableScreen{
      */
     @FXML
     void CustomersScreen(ActionEvent event) throws IOException {
-        loadScreen(event,new CustomersScreen(session), "../views/CustomerScreen.fxml");
+        loadScreen(event,new CustomersScreen(session), "/views/CustomerScreen.fxml");
     }
 
     /**
@@ -83,7 +83,7 @@ public class MainScreen extends TranslatableScreen{
      */
     @FXML
     void ReportsScreen(ActionEvent event) throws IOException {
-        loadScreen(event,new ReportsScreen(session), "../views/ReportsScreen.fxml");
+        loadScreen(event,new ReportsScreen(session), "/views/ReportsScreen.fxml");
     }
 
     /**
